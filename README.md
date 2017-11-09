@@ -10,7 +10,12 @@ All C code have an extension with ".c" that tells the compiler where the program
 #include <stdio.h>
 int main()
 {
- /* some program */
+  /* some program */
+  int a;
+  scanf("%d", &a);
+  printf("You entered &d\n", a);
+
+  return 0;
 }
 ```
 
