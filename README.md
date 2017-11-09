@@ -46,6 +46,7 @@ This piece of the program are just function calls which read input from users an
 ----
 
 # C Data Types
+## Integers
 Integers can be stored as follows (most ints are 4 bytes in the modern day). These are important when considering dynamic memory allocation:
 - Short: 2 bytes, 16 bits
 - Int: 2 bytes, 16 bits
@@ -89,6 +90,77 @@ unsigned int students;
 long usigned int;
 short usigned int;
 
+```
+
+
+## Floating Point/Decimal
+For Int Long/Short types, numbers that do not have numbers after their decimal points. C supports floating points or decimal data types. Consider that datatypes for decimals are well understood by the C compiler and are the following.<br>
+Floating point data type bit limits consist of m times E raised to the power of n, where exponent n is an integer, and the coefficient m is any real number.
+<br>m * x E^n, where E = 2.718
+<br>
+These numbers are incredibly large, but do well for their relatively small size.<br>
+- Float 4 bytes, -3.4 E 38 to +3.4 E 38
+- Double 8 bytes, -1.7 E 308 to +1.7 E 308
+- Long Double 10 bytes, -1.7e4932 to +1.7e4932
+Ex.
+```c
+/* floating point */
+
+```
+
+## Text
+The string datatype is denoted with 'char'. Char is a basic datatype in C and is used to hold a single character.
+- Char 1 byte, 256<br>
+We can store the value of a single character by enclosing it in single quotes.<br>Ex.
+```c
+char a, b, c;
+  a = 'Art';
+  b = 'Bot';
+  c = 'Cot';
+```
+<br>
+
+NOTE:
+We know that computers can only understand strings, right?<br>
+So how does a computer/compiler know to understand keystrokes?<br>
+
+## How Do Computers Recognize Characters?
+This is an important concept that explains how programming languages can understand languages, like C, get around the limitation of computers only understanding bits. 
+#### ASCII/UTF-8
+The American Standard Code for Information Interchange enforces a standard that literally describe the required numerical representations of characters, like 'a - z' and '! - +
+', or some action.<br>
+All the keys on a keyboard have an ASCII code - it's basically a mapping between characters to fingers. 
+<br>Ex.<br>
+| a | ASCII CODE 097 | Binary 01100001 |<br>
+| b | ASCII CODE 098 | Binary 01100010 |<br>
+| c | ASCII CODE 099 | Binary 01100011 |<br>
+...<br>
+| r | ASCII CODE 114 | Binary 01110010 |<br>
+
+The resulting impact of this standardization is a uniform way for users to talk to computers!
+<br>
+The C language is basically "faking" the contents of a variable by putting in a number.
+<br>Ex.
+```c
+/* the ASCII character of letter */
+a = 'F';
+b = 'G';
+/* is the same as */
+a = 70;
+b = 71;
+```
+Characters are more or less represented by numeric values. Basically, the char datatype can be treated as an even smaller version of the short type.<br>
+The implication of this is that arithmetic operations can be performed on int, float, and chars datatypes!<br>
+Be careful to carefully write these operations, or you may experience the problem of truncation.
+<br>Ex.
+```c
+/* z will be 195, as ASCII values of 'a' and 'b' are 97 and 98 respectively*/
+char x, y;
+   int z;
+ x = 'a';
+  y = 'b';
+ z = x + y;
+ /*z = 97 + 98*/
 ```
 
 
