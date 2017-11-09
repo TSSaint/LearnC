@@ -150,7 +150,8 @@ a = 70;
 b = 71;
 ```
 Characters are more or less represented by numeric values. Basically, the char datatype can be treated as an even smaller version of the short type.<br>
-The implication of this is that arithmetic operations can be performed on int, float, and chars datatypes!<br>
+#### The implication of this is that arithmetic operations can be performed on int, float, and chars datatypes!
+Integers and characters can somewhat be used interchangeably when executing operations.<br>
 Be careful to carefully write these operations, or you may experience the problem of truncation.
 <br>Ex.
 ```c
@@ -163,5 +164,80 @@ char x, y;
  /*z = 97 + 98*/
 ```
 
+----
+
+# If/Else: The Concept
+In computer science and in life, we always have to make decisions!<br>
+As we make decisions in the tangible world, we need a way to make computers simulate the ability to make decisions. It turns out that both worlds aren't very different - apparently, even the simplest computer science problems are modeling the "real" world. In C we use if/else statements Wto execute singular or multiple instructions in the if/else statement.<br>
+
+## If then Else
+We make decisions in every step of our lives.<br> 
+For example, let's take apart a day - each decision we make builds upon the next, and culminates in the resulting outcomes of our lives.<br>Ex.
+```c
+/* rainy day */
+if 'raining outside'
+  'carry an umbrella'
+
+/* work schedule */
+if 'tomorrow is a work day'
+  'set an alarm the night before'
+ else
+  'plan dinner with friends'
+ 
+/* specific scheduling */
+if 'tomorrow is a work day'
+  'set an alarm the night before'
+ else
+  if 'start of a 3-day weekend'
+   'set an alarm - go on a road trip'
+  else
+   'plan dinner with friends'
+```
+Making decisions is a core concept in computer programming - all programming languages support this ability to execute "IF/ELSE" statements.
+<br> 
+
+## Decision Control Structures
+Take the example:<br>
+Ex.
+```c
+/* the umbrella examble */
+/* not raining by default */
+int bIsRaining = 0;
+printf("Is it raining? Enter 1 if yes.");
+scanf("%d", &bIsRaining);
+/* if statement */
+if (bIsRaining == 1)
+ printf("It's raining - bring an umbrella!");
+```
+There are typically 3 parts of an if statement.<br>
+1. Condition<br>
+This is something that is checked, usually to see if something is true or not.
+<br>
+A logical test that evaluates to True or False.<br>
+note: In C, any Non-zero value is "true", whereas a Zero value is "false". This very important detail to consider. Positive OR negative values are treated as true.
+
+2. Scope<br>
+This is typically executed if the checked condition matches the scope.
+<br>
+If the condition we're testing are true, some commands are executed.<br>
+note: No curly braces are required if the scope of the if statement consists of a single command
+<br>otherwise,
+The scope must be enclosed in curly braces - otherwise called a compound statement. Remember, the if-scope can contain anything, including more if-else statements or NESTED if statements!
+Ex.
+```c
+/* multi-statement execution */
+int bIsRaining = 0;
+printf("Is it raining? Enter 1 if yes.");
+scanf("%d", &bIsRaining);
+/* if statement */
+{ if (bIsRaining == 1)
+  printf("It's raining - bring an umbrella!");
+  printf("Do not wear anything else but boots!");
+  printf("Don't lose the umbrella!");
+}
+```
+
+3. Statement(s)<br>
+There can be multiple statements in scope, or in the If block. All commands are executed in this block/if the scope is passed.
 
 
