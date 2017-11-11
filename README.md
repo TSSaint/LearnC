@@ -205,7 +205,7 @@ Ex.
 int bIsRaining = 0;
 printf("Is it raining? Enter 1 if yes.");
 scanf("%d", &bIsRaining);
-/* if statement */
+/* if statement, single-statement execution */
 if (bIsRaining == 1)
  printf("It's raining - bring an umbrella!");
 ```
@@ -222,22 +222,25 @@ This is typically executed if the checked condition matches the scope.
 If the condition we're testing are true, some commands are executed.<br>
 note: No curly braces are required if the scope of the if statement consists of a single command
 <br>otherwise,
-The scope must be enclosed in curly braces - otherwise called a compound statement. Remember, the if-scope can contain anything, including more if-else statements or NESTED if statements!
+The scope must be enclosed in curly braces. This is mandatory - otherwise called a compound statement. If this is not included, the C compiler will not know what do do with the multiple lines. It does not hurt to always use curly braces. Remember, the if-scope can contain anything, including more if-else statements or NESTED if statements!
 Ex.
 ```c
 /* multi-statement execution */
 int bIsRaining = 0;
-printf("Is it raining? Enter 1 if yes.");
-scanf("%d", &bIsRaining);
-/* if statement */
-{ if (bIsRaining == 1)
+ printf("Is it raining? Enter 1 if yes.");
+ scanf("%d", &bIsRaining);
+ { if (bIsRaining == 1)
   printf("It's raining - bring an umbrella!");
   printf("Do not wear anything else but boots!");
   printf("Don't lose the umbrella!");
-}
+ }
 ```
 
 3. Statement(s)<br>
 There can be multiple statements in scope, or in the If block. All commands are executed in this block/if the scope is passed.
+
+# Evaluation
+How do we evaluate the condition of an if/else statement?
+
 
 
