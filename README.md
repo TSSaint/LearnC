@@ -211,9 +211,7 @@ if (bIsRaining == 1)
 ```
 There are typically 3 parts of an if statement.<br>
 1. Condition<br>
-This is something that is checked, usually to see if something is true or not.
-<br>
-A logical test that evaluates to True or False.<br>
+This is something that is checked, usually to see if something is true or not. A logical test that evaluates to True or False.<br>
 note: In C, any Non-zero value is "true", whereas a Zero value is "false". This very important detail to consider. Positive OR negative values are treated as true.
 
 2. Scope<br>
@@ -222,7 +220,7 @@ This is typically executed if the checked condition matches the scope.
 If the condition we're testing are true, some commands are executed.<br>
 note: No curly braces are required if the scope of the if statement consists of a single command
 <br>otherwise,
-The scope must be enclosed in curly braces. This is mandatory - otherwise called a compound statement. If this is not included, the C compiler will not know what do do with the multiple lines. It does not hurt to always use curly braces. Remember, the if-scope can contain anything, including more if-else statements or NESTED if statements!
+The scope must be enclosed in curly braces. This is mandatory - otherwise called a compound statement. If this is not included, the C compiler will not know what do do with the multiple lines. It does not hurt to always use curly braces. Remember, the if-scope can contain anything, including more if-else statements or NESTED if statements!<br>
 Ex.
 ```c
 /* multi-statement execution */
